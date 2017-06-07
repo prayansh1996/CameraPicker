@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H93-cU-3bn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CameraPicker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,155 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXx-bk-ciJ">
+                                <rect key="frame" x="0.0" y="274" width="375" height="393"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ud0-Sh-lhR">
+                                <rect key="frame" x="121" y="314" width="133" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Pick Image">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KYY-Mh-Ywk"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acid-cat" translatesAutoresizingMaskIntoConstraints="NO" id="4JB-sx-0AO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="274"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="274" id="dii-cU-9vl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1707719407318801" green="0.17198956785855474" blue="0.17564244923857864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4JB-sx-0AO" secondAttribute="trailing" id="2P7-qb-euk"/>
+                            <constraint firstItem="4JB-sx-0AO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4ch-Dh-gOe"/>
+                            <constraint firstItem="Ud0-Sh-lhR" firstAttribute="top" secondItem="4JB-sx-0AO" secondAttribute="bottom" constant="40" id="GIT-mF-u9o"/>
+                            <constraint firstItem="4JB-sx-0AO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cSA-lu-7G6"/>
+                            <constraint firstItem="Ud0-Sh-lhR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qVD-57-mwf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="4JB-sx-0AO" id="JZ9-wy-Lq2"/>
+                        <outlet property="pickImage" destination="Ud0-Sh-lhR" id="Bkf-dK-zll"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="eVW-S5-O1Q"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="oLf-ww-1vM">
+            <objects>
+                <viewController id="H93-cU-3bn" customClass="SecondViewController" customModule="CameraPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i9W-d9-T2Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="bor-d1-oUQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rKm-5t-N9S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger-king" translatesAutoresizingMaskIntoConstraints="NO" id="JQK-d8-RJ4">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="8OJ-kX-v1D"/>
+                                    <constraint firstAttribute="width" constant="200" id="SUV-0a-cbM"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UmD-A1-ZrT" appends="YES" id="xDZ-vE-JdQ"/>
+                                    <outletCollection property="gestureRecognizers" destination="Be4-gZ-jFT" appends="YES" id="Q2F-ox-D9a"/>
+                                    <outletCollection property="gestureRecognizers" destination="19b-YY-7rG" appends="YES" id="Nq6-SH-NgN"/>
+                                    <outletCollection property="gestureRecognizers" destination="Kf5-od-zSi" appends="YES" id="L9J-oP-Y8V"/>
+                                    <outletCollection property="gestureRecognizers" destination="Vjo-iy-rU5" appends="YES" id="AI0-MM-C4q"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hm4-Wg-dGW">
+                                <rect key="frame" x="153" y="617" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Transition"/>
+                                <connections>
+                                    <segue destination="xoX-m6-ulP" kind="presentation" modalTransitionStyle="crossDissolve" id="2y0-th-HSW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="JQK-d8-RJ4" firstAttribute="centerX" secondItem="rKm-5t-N9S" secondAttribute="centerX" id="5Jz-8u-igR"/>
+                            <constraint firstItem="JQK-d8-RJ4" firstAttribute="centerY" secondItem="rKm-5t-N9S" secondAttribute="centerY" id="N1c-wk-KB5"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xyF-FE-kGx" appends="YES" id="tb2-gI-9AK"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="burgerKingLogo" destination="JQK-d8-RJ4" id="3M7-av-Nw6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CLg-5c-pmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="UmD-A1-ZrT">
+                    <connections>
+                        <action selector="logoPanned:" destination="H93-cU-3bn" id="sah-so-XdD"/>
+                    </connections>
+                </panGestureRecognizer>
+                <rotationGestureRecognizer id="Be4-gZ-jFT">
+                    <connections>
+                        <action selector="logoRotated:" destination="H93-cU-3bn" id="W45-14-7bG"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="19b-YY-7rG">
+                    <connections>
+                        <action selector="logoPinched:" destination="H93-cU-3bn" id="KlO-Pg-lnR"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="xyF-FE-kGx">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="edgeSwipe:" destination="H93-cU-3bn" id="uHJ-Hj-xbM"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Kf5-od-zSi">
+                    <connections>
+                        <action selector="logoLongPressed:" destination="H93-cU-3bn" id="fPW-YA-cQr"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Vjo-iy-rU5">
+                    <connections>
+                        <action selector="logoSwiped:" destination="H93-cU-3bn" id="bMB-j6-Ndj"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1072.8" y="122.78860569715144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="y98-9w-UV9">
+            <objects>
+                <viewController id="xoX-m6-ulP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UIo-ic-oKz"/>
+                        <viewControllerLayoutGuide type="bottom" id="OE1-oF-Of1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vvd-KF-9Ms">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H2X-ZA-mDG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1937" y="123"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="acid-cat" width="2560" height="1600"/>
+        <image name="burger-king" width="450" height="450"/>
+    </resources>
 </document>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB4ADD161EE6BEF900148856 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4ADD151EE6BEF900148856 /* SecondViewController.swift */; };
+		EB4ADD181EE6BF3300148856 /* burger-king.png in Resources */ = {isa = PBXBuildFile; fileRef = EB4ADD171EE6BF3300148856 /* burger-king.png */; };
 		EB51AADB1EE6947B00944F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51AADA1EE6947B00944F8A /* AppDelegate.swift */; };
 		EB51AADD1EE6947B00944F8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51AADC1EE6947B00944F8A /* ViewController.swift */; };
 		EB51AAE01EE6947B00944F8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB51AADE1EE6947B00944F8A /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB4ADD151EE6BEF900148856 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		EB4ADD171EE6BF3300148856 /* burger-king.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burger-king.png"; sourceTree = "<group>"; };
 		EB51AAD71EE6947B00944F8A /* CameraPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB51AADA1EE6947B00944F8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB51AADC1EE6947B00944F8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +104,9 @@
 				EB51AADA1EE6947B00944F8A /* AppDelegate.swift */,
 				EB51AADC1EE6947B00944F8A /* ViewController.swift */,
 				EB51AADE1EE6947B00944F8A /* Main.storyboard */,
+				EB4ADD151EE6BEF900148856 /* SecondViewController.swift */,
 				EB51AAE11EE6947B00944F8A /* Assets.xcassets */,
+				EB4ADD171EE6BF3300148856 /* burger-king.png */,
 				EB51AAE31EE6947B00944F8A /* LaunchScreen.storyboard */,
 				EB51AAE61EE6947B00944F8A /* Info.plist */,
 			);
@@ -193,6 +199,7 @@
 				TargetAttributes = {
 					EB51AAD61EE6947B00944F8A = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 69DY3NLTSP;
 						ProvisioningStyle = Automatic;
 					};
 					EB51AAEA1EE6947B00944F8A = {
@@ -235,6 +242,7 @@
 				EB51AAE51EE6947B00944F8A /* LaunchScreen.storyboard in Resources */,
 				EB51AAE21EE6947B00944F8A /* Assets.xcassets in Resources */,
 				EB51AAE01EE6947B00944F8A /* Main.storyboard in Resources */,
+				EB4ADD181EE6BF3300148856 /* burger-king.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB4ADD161EE6BEF900148856 /* SecondViewController.swift in Sources */,
 				EB51AADD1EE6947B00944F8A /* ViewController.swift in Sources */,
 				EB51AADB1EE6947B00944F8A /* AppDelegate.swift in Sources */,
 			);
@@ -414,10 +423,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 69DY3NLTSP;
 				INFOPLIST_FILE = CameraPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = none.CameraPicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,10 +438,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 69DY3NLTSP;
 				INFOPLIST_FILE = CameraPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = none.CameraPicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -507,6 +522,7 @@
 				EB51AB011EE6947B00944F8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB51AB021EE6947B00944F8A /* Build configuration list for PBXNativeTarget "CameraPickerTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +531,7 @@
 				EB51AB041EE6947B00944F8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB51AB051EE6947B00944F8A /* Build configuration list for PBXNativeTarget "CameraPickerUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +540,7 @@
 				EB51AB071EE6947B00944F8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
